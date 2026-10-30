@@ -31,11 +31,17 @@ public class PosterResourceConfig implements WebMvcConfigurer {
                 .toString();
 
         registry.addResourceHandler("/img/posters/**")
-                .addResourceLocations(postersLocation)
-                .setCachePeriod(3600);
+        .addResourceLocations(
+                postersLocation.endsWith("/") ? postersLocation : postersLocation + "/",
+                "classpath:/static/img/posters/"
+        )
+        .setCachePeriod(3600);
 
         registry.addResourceHandler("/img/people/**")
-                .addResourceLocations(peopleLocation)
-                .setCachePeriod(3600);
+        .addResourceLocations(
+                peopleLocation.endsWith("/") ? peopleLocation : peopleLocation + "/",
+                "classpath:/static/img/people/"
+        )
+        .setCachePeriod(3600);
     }
 }
