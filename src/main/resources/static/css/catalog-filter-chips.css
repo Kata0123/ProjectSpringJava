@@ -1,0 +1,120 @@
+.filters.catalog-chip-mode {
+    display: block;
+    margin-bottom: 24px;
+}
+
+.filters.catalog-chip-mode #fq {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+.filters.catalog-chip-mode .catalog-native-select {
+    display: none;
+}
+
+.catalog-filter-lists {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.catalog-filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.catalog-filter-group h3,
+.catalog-tag-section h3 {
+    margin: 0;
+    color: #f5f5f9;
+    font-family: "Unbounded", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.catalog-filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.catalog-filter-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 37px;
+    padding: 8px 18px;
+    border: 1px solid #292e3d;
+    border-radius: 999px;
+    background: transparent;
+    color: #a8c5ec;
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.35;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.catalog-filter-chip:hover {
+    color: #ffffff;
+    border-color: #f5af36;
+    background: rgba(245, 175, 54, 0.08);
+    transform: translateY(-1px);
+}
+
+.catalog-filter-chip.active,
+.catalog-filter-chip[aria-pressed="true"] {
+    border-color: #d28a25;
+    background: rgba(192, 115, 35, 0.32);
+    color: #ffffff;
+}
+
+.catalog-filter-chip:focus-visible {
+    outline: 2px solid #ffbd3c;
+    outline-offset: 3px;
+}
+
+.catalog-tag-section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.catalog-tag-section .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .catalog-filter-lists {
+        gap: 20px;
+    }
+
+    .catalog-filter-options {
+        gap: 8px;
+    }
+
+    .catalog-filter-chip {
+        min-height: 35px;
+        padding: 7px 13px;
+        font-size: 12px;
+    }
+
+    .catalog-filter-group h3,
+    .catalog-tag-section h3 {
+        font-size: 14px;
+    }
+}
